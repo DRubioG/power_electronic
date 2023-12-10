@@ -34,14 +34,14 @@ def ab_2_dq(dq, theta):
 		  			[np.sin(theta), np.cos(theta), 0],
 					[0, 0, 1]]
 
-	ab =np.matmul(mat_clark_inv, dq)
+	ab =np.matmul(mat_clark_inv, dq) 
 
 	return ab
 
 
 def abc_2_dq(abc, theta):
 	ab = abc_2_ab(abc)
-	dq = dq_2_ab(ab, theta)
+	dq = ab_2_dq(ab, theta)
 
 	return dq
 
